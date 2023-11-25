@@ -5,7 +5,7 @@ import { PaymentClassification } from '../Payment/PaymentClassification.ts';
 import { PaymentSchedule } from '../Payment/PaymentSchedule.ts';
 import { Transaction } from './Transaction.ts';
 
-export abstract class AddEmployeeTransaction implements Transaction {
+export abstract class AddEmployee implements Transaction {
   protected itsEmpId: number;
   protected itsName: string;
   protected itsAddress: string;

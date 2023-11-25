@@ -1,6 +1,6 @@
 import { PaymentClassification } from '../Payment/PaymentClassification.ts';
 import { PaymentSchedule } from '../Payment/PaymentSchedule.ts';
-import { AddEmployeeTransaction } from './AddEmployeeTransaction.ts';
+import { AddEmployee } from './AddEmployee.ts';
 
 export class SalariedClassification implements PaymentClassification {
   constructor(private _salary: number) {}
@@ -19,7 +19,7 @@ export class MonthlySchedule implements PaymentSchedule {
   // Implement methods and properties here
 }
 
-export class AddSalariedEmployee extends AddEmployeeTransaction {
+export class AddSalariedEmployee extends AddEmployee {
   private salary: number;
 
   constructor(empId: number, name: string, address: string, salary: number) {

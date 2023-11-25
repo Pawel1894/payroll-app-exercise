@@ -1,5 +1,5 @@
 import { PaymentClassification } from '../Payment/PaymentClassification.ts';
-import { AddEmployeeTransaction } from './AddEmployeeTransaction.ts';
+import { AddEmployee } from './AddEmployee.ts';
 import { WeeklySchedule } from './AddHourlyEmployee.ts';
 
 export class CommissionedClassification implements PaymentClassification {
@@ -22,7 +22,7 @@ export class CommissionedClassification implements PaymentClassification {
   }
 }
 
-export class AddCommissionedEmployee extends AddEmployeeTransaction {
+export class AddCommissionedEmployee extends AddEmployee {
   private salary: number;
   private comissionRate: number;
 
