@@ -1,26 +1,7 @@
+import { CommissionedClassification } from '../Payment/ComissionedClassification.ts';
 import { PaymentClassification } from '../Payment/PaymentClassification.ts';
+import { WeeklySchedule } from '../Payment/WeeklySchedule.ts';
 import { AddEmployee } from './AddEmployee.ts';
-import { WeeklySchedule } from './AddHourlyEmployee.ts';
-
-export class CommissionedClassification implements PaymentClassification {
-  constructor(private _salary: number, private _commissionRate: number) {}
-
-  set salary(value: number) {
-    this._salary = value;
-  }
-
-  get salary() {
-    return this._salary;
-  }
-
-  set commissionRate(value: number) {
-    this._commissionRate = value;
-  }
-
-  get commissionRate() {
-    return this._commissionRate;
-  }
-}
 
 export class AddCommissionedEmployee extends AddEmployee {
   private salary: number;
