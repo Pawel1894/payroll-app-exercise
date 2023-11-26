@@ -1,7 +1,7 @@
 import { TimeCard } from '../TimeCard.ts';
 
 export class HourlyClassification {
-  private _timeCards: Map<string, TimeCard> = new Map<string, TimeCard>();
+  private _timeCards = new Map<string, TimeCard>();
 
   constructor(private _hourlyRate: number) {}
 

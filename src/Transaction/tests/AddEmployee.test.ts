@@ -1,9 +1,14 @@
 import { assertEquals, assertExists } from "https://deno.land/std@0.206.0/assert/mod.ts";
-import { AddSalariedEmployee, MonthlySchedule, SalariedClassification } from '../AddSalariedEmployee.ts';
+import { AddSalariedEmployee } from '../AddSalariedEmployee.ts';
 import { PayrollDatabase } from '../../DB/PayrollDatabase.ts';
 import { HoldMethod } from '../../HoldMethod.ts';
-import { AddHourlyEmployee, HourlyClassification, WeeklySchedule } from '../AddHourlyEmployee.ts';
-import { AddCommissionedEmployee, CommissionedClassification } from '../AddCommissionedEmployee.ts';
+import { AddHourlyEmployee } from '../AddHourlyEmployee.ts';
+import { AddCommissionedEmployee } from '../AddCommissionedEmployee.ts';
+import { SalariedClassification } from '../../Payment/SalariedClassification.ts';
+import { MonthlySchedule } from '../../Payment/MonthlySchedule.ts';
+import { HourlyClassification } from '../../Payment/HourlyClassification.ts';
+import { WeeklySchedule } from '../../Payment/WeeklySchedule.ts';
+import { CommissionedClassification } from '../../Payment/ComissionedClassification.ts';
 
 Deno.test("Should create salaried employee", () => {
   const empId = 1;
