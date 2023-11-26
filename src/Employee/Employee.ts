@@ -1,3 +1,4 @@
+import { Affiliation } from '../Affiliation/Affiliation.ts';
 import { HoldMethod } from '../HoldMethod.ts';
 import { PaymentClassification } from '../Payment/PaymentClassification.ts';
 import { PaymentSchedule } from '../Payment/PaymentSchedule.ts';
@@ -9,6 +10,7 @@ export class Employee {
   private _classification: PaymentClassification = {};
   private _schedule: PaymentSchedule = {};
   private _method: HoldMethod = {};
+  private _affiliation?: Affiliation;
 
   constructor(empId: number, name: string, address: string) {
     this._empId = empId;
@@ -58,5 +60,13 @@ export class Employee {
 
   set method(value: HoldMethod) {
     this._method = value;
+  }
+
+  get affiliation(): Affiliation | undefined {
+    return this._affiliation;
+  }
+
+  set affiliation(value: Affiliation | undefined) {
+    this._affiliation = value;
   }
 }
